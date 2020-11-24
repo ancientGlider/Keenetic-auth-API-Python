@@ -10,7 +10,7 @@ passw = anyPassword
 
 """
 
-def config_file_name = "keenetic.conf"                  # имя конфигурационного файла
+CONFIG_FILE_NAME = "keenetic.conf"                  # имя конфигурационного файла
 
 import configparser
 import requests
@@ -51,7 +51,7 @@ def keen_request(ip_addr, query, post = None):          # отправка за�
 
 
 config = configparser.ConfigParser()  # создаём объекта парсера
-config.read("billing.ini")  # читаем конфиг
+config.read(CONFIG_FILE_NAME)  # читаем конфиг
 ip_addr = config["Router"]["ip_addr"]
 login = config["Router"]["login"]
 passw = config["Router"]["passw"]
